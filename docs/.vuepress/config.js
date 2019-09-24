@@ -28,8 +28,10 @@ module.exports = {
           {
             title: '升级Gradle...',
             children: [
-              ['/contents/02-user-manual/03-upgrading-gradle-01', 'version 5.X'],
-              ['/contents/02-user-manual/03-upgrading-gradle-02', 'version 4.X to 5.0']
+              // ['/contents/02-user-manual/03-upgrading-gradle-01', 'version 5.X'],
+              // ['/contents/02-user-manual/03-upgrading-gradle-02', 'version 4.X to 5.0']
+              ['https://docs.gradle.org/current/userguide/upgrading_version_5.html', 'version 5.X'],
+              ['https://docs.gradle.org/current/userguide/upgrading_version_4.html', 'version 4.X to 5.0']
             ]
           },
           {

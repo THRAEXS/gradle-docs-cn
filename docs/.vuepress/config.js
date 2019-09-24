@@ -8,13 +8,41 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: 'Documents', link: '/contents/01-docs-home/' },
-      // { text: 'Docs Home', link: '/contents/01-docs-home/' },
-      // { text: 'User Manual', link: '/contents/02-user-manual/' },
-      // { text: 'Running Gradle Builds', link: '/contents/03-running-gradle-builds/' },
-      // { text: 'Authoring Gradle Builds', link: '/contents/04-authoring-gradle-builds/' },
-      // { text: 'Extending Gradle', link: '/contents/05-extending-gradle/' },
-      // { text: 'Reference', link: '/contents/06-reference/' }
+      { text: 'Docs Home', link: '/contents/01-docs-home/' },
+      { text: 'Tutorials', link: 'https://gradle.org/guides' },
+      { text: 'Release Notes', link: 'https://docs.gradle.org/current/release-notes.html' },
+      { text: 'Gradle API', items: [
+        { text: 'Javadoc', link: 'https://gradle.org/guides' },
+        { text: 'Groovy DSL Reference', link: 'https://gradle.org/guides' },
+        { text: 'Groovy DSL Primer', link: 'https://gradle.org/guides' },
+        { text: 'Kotlin DSL API', link: 'https://gradle.org/guides' },
+        { text: 'Kotlin DSL Primer', link: 'https://gradle.org/guides' }
+      ] },
+    ],
+    sidebar: [
+      {
+        title: 'User Manual',
+        // path: '/contents/02-user-manual/',
+        children: [
+          '/contents/02-user-manual/01-getting-started'
+        ]
+      },
+      {
+        title: 'Running Gradle Builds',
+        children: []
+      },
+      {
+        title: 'Authoring Gradle Builds',
+        children: []
+      },
+      {
+        title: 'Extending Gradle',
+        children: []
+      },
+      {
+        title: 'Reference',
+        children: []
+      }
     ]
   }
 }

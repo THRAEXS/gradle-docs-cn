@@ -3,10 +3,11 @@ title: Docs Home
 date: 2019-08-24 08:07:00
 ---
 
-## Gradle用户手册
+# Gradle用户手册
 
-> **Tips**
+::: tip
 是否想了解顶级工程团队用来保持构建快速和高性能的提示和技巧？[在此处注册](https://gradle.com/training/build-cache-deep-dive/?bid=docs-userguide&_ga=2.99946014.1480847771.1569235223-1279986108.1569235223)以获取我们的构建缓存培训。
+:::
 
 Gradle是专注于灵活性和性能的开源构建自动化工具。 Gradle构建脚本是使用[Groovy](https://groovy-lang.org)或[Kotlin](https://kotlinlang.org)DSL编写的。阅读有关[Gradle特性](https://gradle.org/features/)的信息，以了解Gradle的功能。
 

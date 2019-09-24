@@ -1,8 +1,8 @@
 # Gradle 5.6.2中文文档
 
 - User Manual
-  - [x] Getting Started
-  - [ ] Installing Gradle
+  - [X] Getting Started
+  - [X] Installing Gradle
   - [ ] Upgrading Gradle...
   - [ ] Migrating to Gradle...
   - [ ] Troubleshooting Builds

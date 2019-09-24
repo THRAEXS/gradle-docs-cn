@@ -24,7 +24,8 @@ module.exports = {
         title: 'User Manual',
         // path: '/contents/02-user-manual/',
         children: [
-          '/contents/02-user-manual/01-getting-started'
+          '/contents/02-user-manual/01-getting-started',
+          '/contents/02-user-manual/02-installing-gradle'
         ]
       },
       {

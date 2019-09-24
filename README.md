@@ -3,8 +3,12 @@
 - User Manual
   - [X] Getting Started
   - [X] Installing Gradle
-  - [ ] Upgrading Gradle...
-  - [ ] Migrating to Gradle...
+  - Upgrading Gradle...
+    - [ ] version 5.X
+    - [ ] version 4.X to 5.0
+  - Migrating to Gradle...
+    - [ ] from Maven
+    - [ ] from Ant
   - [ ] Troubleshooting Builds
 
 - Running Gradle Builds

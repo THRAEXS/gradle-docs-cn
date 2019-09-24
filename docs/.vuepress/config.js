@@ -13,19 +13,33 @@ module.exports = {
       { text: 'Release Notes', link: 'https://docs.gradle.org/current/release-notes.html' },
       { text: 'Gradle API', items: [
         { text: 'Javadoc', link: 'https://gradle.org/guides' },
-        { text: 'Groovy DSL Reference', link: 'https://gradle.org/guides' },
-        { text: 'Groovy DSL Primer', link: 'https://gradle.org/guides' },
-        { text: 'Kotlin DSL API', link: 'https://gradle.org/guides' },
-        { text: 'Kotlin DSL Primer', link: 'https://gradle.org/guides' }
+        { text: 'Groovy DSL Reference', link: 'https://gradle.org/guides2' },
+        { text: 'Groovy DSL Primer', link: 'https://gradle.org/guides3' },
+        { text: 'Kotlin DSL API', link: 'https://gradle.org/guides4' },
+        { text: 'Kotlin DSL Primer', link: 'https://gradle.org/guides5' }
       ] },
     ],
     sidebar: [
       {
         title: 'User Manual',
-        // path: '/contents/02-user-manual/',
         children: [
           '/contents/02-user-manual/01-getting-started',
-          '/contents/02-user-manual/02-installing-gradle'
+          '/contents/02-user-manual/02-installing-gradle',
+          {
+            title: '升级Gradle...',
+            children: [
+              ['/contents/02-user-manual/03-upgrading-gradle-01', 'version 5.X'],
+              ['/contents/02-user-manual/03-upgrading-gradle-02', 'version 4.X to 5.0']
+            ]
+          },
+          {
+            title: '迁移至Gradle...',
+            children: [
+              ['https://docs.gradle.org/current/userguide/migrating_from_maven.html', 'from Maven'],
+              ['https://docs.gradle.org/current/userguide/migrating_from_ant.html', 'from Ant']
+            ]
+          },
+          '/contents/02-user-manual/05-troubleshooting-builds'
         ]
       },
       {

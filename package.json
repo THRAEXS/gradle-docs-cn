@@ -1,0 +1,9 @@
+{
+  "name": "gradle-docs-chinese",
+  "version": "1.0.0",
+  "description": "Gradle 5.6.2 Chinese document",
+  "main": "index.js",
+  "author": "鬼王",
+  "license": "MIT",
+  "private": false
+}

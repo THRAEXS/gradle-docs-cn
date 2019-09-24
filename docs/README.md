@@ -1,10 +1,10 @@
 ---
 home: true
 heroImage: /logo.jpg
-heroText: Gradle Build Tool
-tagline: Gradle 5.6.2
+heroText: Gradle 5.6.2
+tagline: ' '
 actionText: Getting Started →
-actionLink: /
+actionLink: /contents/01-docs-home/
 features:
 - title: 高度可定制
   details: Gradle以最基本的方式可定制和可扩展的方式建模。

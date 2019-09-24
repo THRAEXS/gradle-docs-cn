@@ -2,8 +2,14 @@
   "name": "gradle-docs-chinese",
   "version": "1.0.0",
   "description": "Gradle 5.6.2 Chinese document",
-  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
   "author": "鬼王",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "vuepress": "^1.1.0"
+  }
 }

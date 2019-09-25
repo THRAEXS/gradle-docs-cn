@@ -15,7 +15,10 @@
   - [X] Troubleshooting Builds
 
 - Running Gradle Builds
-  - [ ] Customizing Execution
+  - Customizing Execution
+    - [ ] Configuring the Build Environment
+    - [ ] Configuring the Gradle Daemon
+    - [ ] Using Initialization Scripts
   - [ ] Executing Multi-Project Builds
   - [ ] Inspecting Gradle Builds
   - [ ] Optimizing Build Times

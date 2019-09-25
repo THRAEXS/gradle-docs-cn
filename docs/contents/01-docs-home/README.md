@@ -1,9 +1,11 @@
 ---
 title: Docs Home
-date: 2019-08-24 08:07:00
+date: 2019-09-24 08:07:00
 ---
 
 # Gradle用户手册
+
+[[toc]]
 
 ::: tip
 是否想了解顶级工程团队用来保持构建快速和高性能的提示和技巧？[在此处注册](https://gradle.com/training/build-cache-deep-dive/?bid=docs-userguide&_ga=2.99946014.1480847771.1569235223-1279986108.1569235223)以获取我们的构建缓存培训。

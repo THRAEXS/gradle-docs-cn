@@ -21,6 +21,12 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: 'About Gradle',
+        children: [
+          '/contents/00-about-gradle/'
+        ]
+      },
+      {
         title: 'User Manual',
         children: [
           '/contents/02-user-manual/01-getting-started',

@@ -1,9 +1,11 @@
 ---
 title: 故障排除
-date: 2019-08-24 16:43:00
+date: 2019-09-24 16:43:00
 ---
 
 # {{ $page.title }}
+
+[[toc]]
 
 以下是常见问题的集合以及解决这些问题的建议。您可以获取其他提示，并搜索[Gradle forums](https://discuss.gradle.org/c/help-discuss)和[StackOverflow #gradle](https://stackoverflow.com/questions/tagged/gradle)答案以及来自[help.gradle.org](https://gradle.org/help/)的Gradle文档。
 

@@ -1,5 +1,8 @@
 # Gradle 5.6.2中文文档
 
+- About Gradle
+  - [X] What is Gradle?
+
 - User Manual
   - [X] Getting Started
   - [X] Installing Gradle
@@ -9,7 +12,7 @@
   - Migrating to Gradle...
     - [ ] from Maven
     - [ ] from Ant
-  - [ ] Troubleshooting Builds
+  - [X] Troubleshooting Builds
 
 - Running Gradle Builds
   - [ ] Customizing Execution

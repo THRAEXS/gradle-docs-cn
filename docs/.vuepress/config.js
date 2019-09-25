@@ -6,6 +6,7 @@ module.exports = {
   head: [
     [ 'link', { rel: 'icon', href: '/favicon.ico' } ]
   ],
+  plugins: ['code-switcher'],
   themeConfig: {
     nav: [
       { text: 'Docs Home', link: '/contents/01-docs-home/' },

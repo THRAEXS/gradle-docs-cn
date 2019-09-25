@@ -895,7 +895,7 @@
   dependencies:
     nprogress "^0.2.0"
 
-"@vuepress/plugin-register-components@^1.1.0":
+"@vuepress/plugin-register-components@^1.0.0-alpha.0", "@vuepress/plugin-register-components@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-register-components/-/plugin-register-components-1.1.0.tgz#42ea75bcad3fb562fbb86c424136f86e13641162"
   integrity sha512-HXGdcmBdGHLhI8KHr09GnnZEzgCuaIQx1WBqDNfbigSVKEx910L56ej+Whl6VFd7D0uOLUlW4kb9ELM0sjJpKg==
@@ -7068,6 +7068,13 @@ vuepress-html-webpack-plugin@^3.2.0:
     tapable "^1.0.0"
     toposort "^1.0.0"
     util.promisify "1.0.0"
+
+vuepress-plugin-code-switcher@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-code-switcher/-/vuepress-plugin-code-switcher-1.0.0.tgz#95c9b8bf65bdf0bcb570cb6ff000bf55fa640d31"
+  integrity sha512-EQsDInOlklZQbtmvORnwSEkk/cqzMCUpOj6PPmR4GmZv2LRK4cyKJat9AVkmqcaBQkIbUEaWdimJhmtFp0TzVA==
+  dependencies:
+    "@vuepress/plugin-register-components" "^1.0.0-alpha.0"
 
 vuepress-plugin-container@^2.0.0:
   version "2.0.2"

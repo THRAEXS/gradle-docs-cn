@@ -17,7 +17,7 @@
 - Running Gradle Builds
   - Customizing Execution
     - [X] Configuring the Build Environment
-    - [ ] Configuring the Gradle Daemon
+    - [X] Configuring the Gradle Daemon
     - [ ] Using Initialization Scripts
   - [ ] Executing Multi-Project Builds
   - [ ] Inspecting Gradle Builds

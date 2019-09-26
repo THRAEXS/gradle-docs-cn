@@ -58,7 +58,7 @@ module.exports = {
             title: '自定义Execution',
             children: [
               ['/contents/03-running-gradle-builds/01-customizing-execution/01-build-environment', '配置构建环境'],
-              ['/contents/03-running-gradle-builds/01-customizing-execution/02-the-gradle-daemon', '配置Gradle守护进程'],
+              ['/contents/03-running-gradle-builds/01-customizing-execution/02-the-gradle-daemon', '配置Gradle Daemon'],
               ['/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts', '使用初始化脚本']
             ]
           }

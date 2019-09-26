@@ -18,7 +18,7 @@
   - Customizing Execution
     - [X] Configuring the Build Environment
     - [X] Configuring the Gradle Daemon
-    - [ ] Using Initialization Scripts
+    - [X] Using Initialization Scripts
   - [ ] Executing Multi-Project Builds
   - [ ] Inspecting Gradle Builds
   - [ ] Optimizing Build Times

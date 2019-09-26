@@ -5,6 +5,8 @@ date: 2019-09-24 08:36:00
 
 # {{ $page.title }}
 
+> [原文链接](https://docs.gradle.org/current/userguide/getting_started.html)
+
 [[toc]]
 
 每个人都必须从某个地方开始，如果您是Gradle的新手，那么这就是开始的地方。

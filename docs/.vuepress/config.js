@@ -61,7 +61,14 @@ module.exports = {
               ['/contents/03-running-gradle-builds/01-customizing-execution/02-the-gradle-daemon', '配置Gradle Daemon'],
               ['/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts', '使用初始化脚本']
             ]
-          }
+          },
+          '/contents/03-running-gradle-builds/02-executing-multi-project-builds',
+          ['https://guides.gradle.org/creating-build-scans/', '检查Gradle构建'],
+          {
+            title: '优化构建时间',
+            children: []
+          },
+          ['/contents/03-running-gradle-builds/05-integrating-separate-gradle-builds', '集成单独的Gradle构建(复合构建)']
         ]
       },
       {

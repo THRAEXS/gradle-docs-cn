@@ -5,6 +5,8 @@ date: 2019-09-25 09:44:00
 
 # {{ $page.title }}
 
+> [原文链接](https://docs.gradle.org/current/userguide/what_is_gradle.html#what_is_gradle)
+
 [[toc]]
 
 ## 概述

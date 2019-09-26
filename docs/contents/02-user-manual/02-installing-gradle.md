@@ -5,6 +5,8 @@ date: 2019-09-24 15:43:00
 
 # {{ $page.title }}
 
+> [原文链接](https://docs.gradle.org/current/userguide/installation.html)
+
 [[toc]]
 
 您可以在Linux，macOS或Windows上安装Gradle构建工具。本文档涵盖使用软件包管理器（如SDKMAN!）进行安装或Homebrew，以及手动安装。

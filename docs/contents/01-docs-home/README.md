@@ -5,6 +5,8 @@ date: 2019-09-24 08:07:00
 
 # Gradle用户手册
 
+> [原文链接](https://docs.gradle.org/current/userguide/userguide.html)
+
 [[toc]]
 
 ::: tip

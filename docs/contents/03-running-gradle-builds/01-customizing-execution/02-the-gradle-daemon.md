@@ -5,6 +5,8 @@ date: 2019-09-25 15:12:00
 
 # {{ $page.title }}
 
+> [原文链接](https://docs.gradle.org/current/userguide/gradle_daemon.html)
+
 [[toc]]
 
 ::: danger Wikipedia

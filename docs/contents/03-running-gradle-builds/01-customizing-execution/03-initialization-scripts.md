@@ -5,6 +5,8 @@ date: 2019-09-25 15:12:00
 
 # {{ $page.title }}
 
+> [原文链接](https://docs.gradle.org/current/userguide/init_scripts.html)
+
 [[toc]]
 
 Gradle提供了一个强大的机制，允许基于当前环境定制构建。该机制还支持希望与Gradle集成的工具。

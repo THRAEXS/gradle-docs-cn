@@ -1,5 +1,5 @@
 module.exports = {
-  // base: '/gradle-docs/',
+  base: '/gradle-docs/',
   title: 'Gradle Build Tool',
   description: 'Gradle Chinese document',
   port: 8086,
@@ -7,6 +7,9 @@ module.exports = {
     [ 'link', { rel: 'icon', href: '/favicon.ico' } ]
   ],
   plugins: ['code-switcher'],
+  configureWebpack: (config, isServer) => {
+    console.log(config)
+  },
   themeConfig: {
     nav: [
       { text: 'Docs Home', link: '/contents/01-docs-home/' },

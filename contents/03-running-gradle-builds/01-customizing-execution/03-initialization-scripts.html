@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>初始化脚本 | Gradle Build Tool</title>
+    <meta name="description" content="Gradle Chinese document">
+    <link rel="icon" href="/gradle-docs-cn/favicon.ico">
+    
+    <link rel="preload" href="/gradle-docs-cn/assets/css/0.styles.0907a01a.css" as="style"><link rel="preload" href="/gradle-docs-cn/assets/js/app.7989bdc5.js" as="script"><link rel="preload" href="/gradle-docs-cn/assets/js/2.73a3722c.js" as="script"><link rel="preload" href="/gradle-docs-cn/assets/js/17.200ea9f3.js" as="script"><link rel="preload" href="/gradle-docs-cn/assets/js/3.610d035e.js" as="script"><link rel="prefetch" href="/gradle-docs-cn/assets/js/10.810c392f.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/11.57e3fdf3.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/12.497546cb.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/13.ee6978e8.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/14.aa0e4c18.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/15.5e4e4644.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/16.1edd3fe4.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/18.07abdf5f.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/19.82357a94.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/20.028a3e6d.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/21.8bac0d8c.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/22.4e12dbc2.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/23.fb09b07e.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/4.ab5c0d3f.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/5.5b2da86c.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/6.3c42583e.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/7.52ca0f1f.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/8.3399c602.js"><link rel="prefetch" href="/gradle-docs-cn/assets/js/9.eb5ba954.js">
+    <link rel="stylesheet" href="/gradle-docs-cn/assets/css/0.styles.0907a01a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/gradle-docs-cn/" class="home-link router-link-active"><!----> <span class="site-name">Gradle Build Tool</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/gradle-docs-cn/contents/01-docs-home/" class="nav-link">Docs Home</a></div><div class="nav-item"><a href="https://gradle.org/guides" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Tutorials
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://docs.gradle.org/current/release-notes.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Release Notes
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Gradle API</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gradle.org/guides" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Javadoc
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Groovy DSL Reference
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides3" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Groovy DSL Primer
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides4" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Kotlin DSL API
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides5" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Kotlin DSL Primer
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/gradle-docs-cn/contents/01-docs-home/" class="nav-link">Docs Home</a></div><div class="nav-item"><a href="https://gradle.org/guides" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Tutorials
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://docs.gradle.org/current/release-notes.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Release Notes
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Gradle API</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gradle.org/guides" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Javadoc
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Groovy DSL Reference
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides3" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Groovy DSL Primer
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides4" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Kotlin DSL API
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gradle.org/guides5" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Kotlin DSL Primer
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>About Gradle</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>User Manual</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Running Gradle Builds</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>自定义Execution</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/01-build-environment.html" class="sidebar-link">配置构建环境</a></li><li><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/02-the-gradle-daemon.html" class="sidebar-link">配置Gradle Daemon</a></li><li><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts.html" class="active sidebar-link">使用初始化脚本</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts.html#基本用法" class="sidebar-link">基本用法</a></li><li class="sidebar-sub-header"><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts.html#使用初始化脚本" class="sidebar-link">使用初始化脚本</a></li><li class="sidebar-sub-header"><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts.html#编写一个初始化脚本" class="sidebar-link">编写一个初始化脚本</a></li><li class="sidebar-sub-header"><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts.html#初始化脚本的外部依赖关系" class="sidebar-link">初始化脚本的外部依赖关系</a></li><li class="sidebar-sub-header"><a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/03-initialization-scripts.html#初始化脚本插件" class="sidebar-link">初始化脚本插件</a></li></ul></li></ul></section></li><li><a href="/gradle-docs-cn/contents/03-running-gradle-builds/02-executing-multi-project-builds.html" class="sidebar-link">执行多项目构建</a></li><li><a href="https://guides.gradle.org/creating-build-scans/" target="_blank" rel="noopener noreferrer" class="sidebar-link">检查Gradle构建<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>优化构建时间</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/gradle-docs-cn/contents/03-running-gradle-builds/05-integrating-separate-gradle-builds.html" class="sidebar-link">集成单独的Gradle构建(复合构建)</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Authoring Gradle Builds</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Extending Gradle</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Reference</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="page-title"><a href="#page-title" aria-hidden="true" class="header-anchor">#</a> 初始化脚本</h1> <blockquote><p><a href="https://docs.gradle.org/current/userguide/init_scripts.html" target="_blank" rel="noopener noreferrer">原文链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p></p><div class="table-of-contents"><ul><li><a href="#基本用法">基本用法</a></li><li><a href="#使用初始化脚本">使用初始化脚本</a></li><li><a href="#编写一个初始化脚本">编写一个初始化脚本</a><ul><li><a href="#通过初始化脚本配置项目">通过初始化脚本配置项目</a></li><li><a href="#应用初始化脚本时的输出">应用初始化脚本时的输出</a></li></ul></li><li><a href="#初始化脚本的外部依赖关系">初始化脚本的外部依赖关系</a></li><li><a href="#初始化脚本插件">初始化脚本插件</a></li></ul></div><p></p> <p>Gradle提供了一个强大的机制，允许基于当前环境定制构建。该机制还支持希望与Gradle集成的工具。</p> <p>请注意，这与“<code>build-init</code>”插件提供的“<code>init</code>”任务完全不同（请参阅<a href="https://docs.gradle.org/current/userguide/build_init_plugin.html#build_init_plugin" target="_blank" rel="noopener noreferrer">Build Init插件<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>）。</p> <h2 id="基本用法"><a href="#基本用法" aria-hidden="true" class="header-anchor">#</a> 基本用法</h2> <p>初始化脚本（<strong>Initialization scripts</strong>, a.k.a. <strong>init scripts</strong>）与Gradle中的其他脚本相似。但是，这些脚本是在构建开始之前运行的。以下是几种可能的用途：</p> <ul><li><p>设置企业范围的配置，例如在哪里可以找到自定义插件。</p></li> <li><p>根据当前环境设置属性，例如开发人员的计算机与持续集成服务器。</p></li> <li><p>提供构建所需的有关用户的个人信息，例如存储库或数据库身份验证凭据。</p></li> <li><p>定义机器特定的详细信息，例如JDK的安装位置。</p></li> <li><p>注册构建侦听器。希望监听Gradle事件的外部工具可能会发现这很有用。</p></li> <li><p>注册构建记录器。您可能希望自定义Gradle如何记录它生成的事件。</p></li></ul> <p>初始化脚本的一个主要限制是它们不能访问<code>buildSrc</code>项目中的类（有关此功能的详细信息，请参见<a href="https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources" target="_blank" rel="noopener noreferrer">使用buildSrc提取命令式逻辑<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>）。</p> <h2 id="使用初始化脚本"><a href="#使用初始化脚本" aria-hidden="true" class="header-anchor">#</a> 使用初始化脚本</h2> <p>有几种使用初始化脚本的方法：</p> <ul><li><p>在命令行上指定一个文件。命令行选项是<code>-I</code>或<code>--init-script</code>，后跟脚本路径。命令行选项可以多次出现，每次添加另一个初始化脚本。如果命令行上指定的任何文件不存在，则构建将失败。</p></li> <li><p>将一个名为<code>init.gradle</code>的文件（或Kotlin的<code>init.gradle.kts</code>）放在<code>USER_HOME/.gradle/</code>目录中。</p></li> <li><p>将以<code>.gradle</code>（或Kotlin的<code>.init.gradle.kts</code>）结尾的文件放在<code>USER_HOME/.gradle/init.d/</code>目录中。</p></li> <li><p>将以<code>.gradle</code>（或Kotlin的<code>.init.gradle.kts</code>）结尾的文件放在Gradle发行版的<code>GRADLE_HOME/init.d/</code>目录中。这使您可以打包包含一些自定义构建逻辑和插件的自定义Gradle发行版。您可以将其与<a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html#gradle_wrapper" target="_blank" rel="noopener noreferrer">Gradle wrapper<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>结合使用，以使自定义逻辑可用于企业中的所有内部版本。</p></li></ul> <p>如果发现一个以上的初始化脚本，它们将全部按照上述指定的顺序执行。给定目录中的脚本 <strong>按字母顺序执行</strong>。例如，这允许使用一种工具在命令行上指定一个初始化脚本，并且用户可以将一个脚本放入其主目录中以定义环境，并且在执行Gradle时，这两个脚本都将运行。</p> <h2 id="编写一个初始化脚本"><a href="#编写一个初始化脚本" aria-hidden="true" class="header-anchor">#</a> 编写一个初始化脚本</h2> <p>类似于Gradle构建脚本，初始化脚本是Groovy或Kotlin脚本。每个初始化脚本都有一个与之关联的<a href="https://docs.gradle.org/current/dsl/org.gradle.api.invocation.Gradle.html" target="_blank" rel="noopener noreferrer">Gradle<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>实例。初始化脚本中的任何属性引用和方法调用都将委托给此<code>Gradle</code>实例。</p> <p>每个初始化脚本还实现<a href="https://docs.gradle.org/current/dsl/org.gradle.api.Script.html" target="_blank" rel="noopener noreferrer">脚本<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>接口。</p> <h3 id="通过初始化脚本配置项目"><a href="#通过初始化脚本配置项目" aria-hidden="true" class="header-anchor">#</a> 通过初始化脚本配置项目</h3> <p>您可以使用初始化脚本来配置构建中的项目。这与在多项目构建中配置项目的方式类似。以下示例显示了在评估项目之前如何通过初始化脚本执行额外的配置。此样本使用此功能来配置额外的存储库，以仅用于某些环境。</p> <p>示例1.在评估项目之前，使用初始化脚本执行额外的配置</p> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token comment">// build.gradle</span>
+
+repositories <span class="token punctuation">{</span>
+    <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+task showRepos <span class="token punctuation">{</span>
+    doLast <span class="token punctuation">{</span>
+        println <span class="token string gstring">&quot;All repos:&quot;</span>
+        println repositories<span class="token operator">.</span>collect <span class="token punctuation">{</span> it<span class="token operator">.</span>name <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// init.gradle</span>
+
+allprojects <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenLocal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">// build.gradle.kts</span>
+
+repositories <span class="token punctuation">{</span>
+    <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+tasks<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">&quot;showRepos&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    doLast <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;All repos:&quot;</span><span class="token punctuation">)</span>
+        <span class="token comment">//TODO:kotlin-dsl remove filter once we're no longer on a kotlin eap</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>repositories<span class="token punctuation">.</span><span class="token function">map</span> <span class="token punctuation">{</span> it<span class="token punctuation">.</span>name <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">filter</span> <span class="token punctuation">{</span> it <span class="token operator">!=</span> <span class="token string">&quot;maven&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// init.gradle.kts</span>
+
+allprojects <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenLocal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div> <h3 id="应用初始化脚本时的输出"><a href="#应用初始化脚本时的输出" aria-hidden="true" class="header-anchor">#</a> 应用初始化脚本时的输出</h3> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br></div><pre class="language-sh"><code><span class="token operator">&gt;</span> gradle --init-script init.gradle -q showRepos
+All repos:
+<span class="token punctuation">[</span>MavenLocal, MavenRepo<span class="token punctuation">]</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br></div><pre class="language-sh"><code><span class="token operator">&gt;</span> gradle --init-script init.gradle.kts -q showRepos
+All repos:
+<span class="token punctuation">[</span>MavenLocal, MavenRepo<span class="token punctuation">]</span>
+</code></pre></div></div></div> <h2 id="初始化脚本的外部依赖关系"><a href="#初始化脚本的外部依赖关系" aria-hidden="true" class="header-anchor">#</a> 初始化脚本的外部依赖关系</h2> <p>在构建脚本的外部依赖关系中，说明了如何向构建脚本添加外部依赖关系。初始化脚本也可以声明依赖关系。您可以使用<code>initscript()</code>方法执行此操作，并传入一个声明初始化脚本类路径的闭包。</p> <p>示例2.声明一个初始化脚本的外部依赖</p> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token comment">// init.gradle</span>
+
+initscript <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    dependencies <span class="token punctuation">{</span>
+        classpath <span class="token string">'org.apache.commons:commons-math:2.0'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">// init.gradle.kts</span>
+
+initscript <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    dependencies <span class="token punctuation">{</span>
+        <span class="token function">classpath</span><span class="token punctuation">(</span><span class="token string">&quot;org.apache.commons:commons-math:2.0&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div> <p>传递给<code>initscript()</code>方法的闭包可配置<a href="https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/dsl/ScriptHandler.html" target="_blank" rel="noopener noreferrer">ScriptHandler<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>实例。您可以通过将依赖项添加到类路径配置中来声明初始化脚本类路径。这与您声明Java编译类路径的方式相同。可以使用<a href="https://docs.gradle.org/current/userguide/declaring_dependencies.html#declaring_dependencies" target="_blank" rel="noopener noreferrer">Declaring Dependencies<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>中描述的任何依赖项类型，项目依赖项除外。</p> <p>声明了初始化脚本的类路径后，您可以像使用该类路径上的任何其他类一样，使用初始化脚本中的类。以下示例将添加到前面的示例中，并使用初始化脚本类路径中的类。</p> <p>示例3.具有外部依赖关系的初始化脚本</p> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token comment">// init.gradle</span>
+
+<span class="token keyword">import</span> org<span class="token operator">.</span>apache<span class="token operator">.</span>commons<span class="token operator">.</span>math<span class="token operator">.</span>fraction<span class="token operator">.</span>Fraction
+
+initscript <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    dependencies <span class="token punctuation">{</span>
+        classpath <span class="token string">'org.apache.commons:commons-math:2.0'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+println Fraction<span class="token operator">.</span>ONE_FIFTH<span class="token operator">.</span><span class="token function">multiply</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">// init.gradle.kts</span>
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>commons<span class="token punctuation">.</span>math<span class="token punctuation">.</span>fraction<span class="token punctuation">.</span>Fraction
+
+initscript <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    dependencies <span class="token punctuation">{</span>
+        <span class="token function">classpath</span><span class="token punctuation">(</span><span class="token string">&quot;org.apache.commons:commons-math:2.0&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">println</span><span class="token punctuation">(</span>Fraction<span class="token punctuation">.</span>ONE_FIFTH<span class="token punctuation">.</span><span class="token function">multiply</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <p>应用初始化脚本时的输出</p> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br></div><pre class="language-sh"><code><span class="token operator">&gt;</span> gradle --init-script init.gradle -q doNothing
+<span class="token number">2</span> / <span class="token number">5</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br></div><pre class="language-sh"><code><span class="token operator">&gt;</span> gradle --init-script init.gradle.kts -q doNothing
+<span class="token number">2</span> / <span class="token number">5</span>
+</code></pre></div></div></div> <h2 id="初始化脚本插件"><a href="#初始化脚本插件" aria-hidden="true" class="header-anchor">#</a> 初始化脚本插件</h2> <p>类似于Gradle构建脚本或Gradle设置文件，可以将插件应用于初始化脚本。</p> <p>示例4.在初始化脚本中使用插件</p> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token comment">// init.gradle</span>
+
+<span class="token keyword">import</span> org<span class="token operator">.</span>apache<span class="token operator">.</span>commons<span class="token operator">.</span>math<span class="token operator">.</span>fraction<span class="token operator">.</span>Fraction
+
+initscript <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    dependencies <span class="token punctuation">{</span>
+        classpath <span class="token string">'org.apache.commons:commons-math:2.0'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+println Fraction<span class="token operator">.</span>ONE_FIFTH<span class="token operator">.</span><span class="token function">multiply</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">// init.gradle.kts</span>
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>commons<span class="token punctuation">.</span>math<span class="token punctuation">.</span>fraction<span class="token punctuation">.</span>Fraction
+
+initscript <span class="token punctuation">{</span>
+    repositories <span class="token punctuation">{</span>
+        <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    dependencies <span class="token punctuation">{</span>
+        <span class="token function">classpath</span><span class="token punctuation">(</span><span class="token string">&quot;org.apache.commons:commons-math:2.0&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">println</span><span class="token punctuation">(</span>Fraction<span class="token punctuation">.</span>ONE_FIFTH<span class="token punctuation">.</span><span class="token function">multiply</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <p>应用初始化脚本时的输出</p> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token comment">// init.gradle</span>
+
+apply plugin<span class="token punctuation">:</span> EnterpriseRepositoryPlugin
+
+<span class="token keyword">class</span> <span class="token class-name">EnterpriseRepositoryPlugin</span> <span class="token keyword">implements</span> <span class="token class-name">Plugin</span><span class="token operator">&lt;</span>Gradle<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> String ENTERPRISE_REPOSITORY_URL <span class="token operator">=</span> <span class="token string gstring">&quot;https://repo.gradle.org/gradle/repo&quot;</span>
+
+    <span class="token keyword">void</span> <span class="token function">apply</span><span class="token punctuation">(</span>Gradle gradle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ONLY USE ENTERPRISE REPO FOR DEPENDENCIES</span>
+        gradle<span class="token operator">.</span>allprojects <span class="token punctuation">{</span> project <span class="token operator">-&gt;</span>
+            project<span class="token operator">.</span>repositories <span class="token punctuation">{</span>
+
+                <span class="token comment">// Remove all repositories not pointing to the enterprise repository url</span>
+                all <span class="token punctuation">{</span> ArtifactRepository repo <span class="token operator">-&gt;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>repo <span class="token keyword">instanceof</span> <span class="token class-name">MavenArtifactRepository</span><span class="token punctuation">)</span> <span class="token operator">||</span>
+                          repo<span class="token operator">.</span>url<span class="token operator">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> ENTERPRISE_REPOSITORY_URL<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        project<span class="token operator">.</span>logger<span class="token operator">.</span>lifecycle <span class="token string gstring">&quot;Repository <span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">{</span>repo<span class="token operator">.</span>url<span class="token punctuation">}</span></span> removed. Only <span class="token expression"><span class="token punctuation">$</span>ENTERPRISE_REPOSITORY_URL</span> is allowed&quot;</span>
+                        remove repo
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token comment">// add the enterprise repository</span>
+                maven <span class="token punctuation">{</span>
+                    name <span class="token string gstring">&quot;STANDARD_ENTERPRISE_REPO&quot;</span>
+                    url ENTERPRISE_REPOSITORY_URL
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// build.gradle</span>
+
+<span class="token comment">/*
+ * Copyright 2013 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */</span>
+
+<span class="token comment">// tag::show-repos-task[]</span>
+repositories<span class="token punctuation">{</span>
+    <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+ task showRepositories <span class="token punctuation">{</span>
+     doLast <span class="token punctuation">{</span>
+         repositories<span class="token operator">.</span>each <span class="token punctuation">{</span>
+             println <span class="token string gstring">&quot;repository: <span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">{</span>it<span class="token operator">.</span>name<span class="token punctuation">}</span></span> ('<span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">{</span>it<span class="token operator">.</span>url<span class="token punctuation">}</span></span>')&quot;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// end::show-repos-task[]</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">// init.gradle.kts</span>
+
+apply<span class="token operator">&lt;</span>EnterpriseRepositoryPlugin<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> EnterpriseRepositoryPlugin <span class="token operator">:</span> Plugin<span class="token operator">&lt;</span>Gradle<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">companion</span> <span class="token keyword">object</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token keyword">val</span> ENTERPRISE_REPOSITORY_URL <span class="token operator">=</span> <span class="token string">&quot;https://repo.gradle.org/gradle/repo&quot;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">apply</span><span class="token punctuation">(</span>gradle<span class="token operator">:</span> Gradle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ONLY USE ENTERPRISE REPO FOR DEPENDENCIES</span>
+        gradle<span class="token punctuation">.</span><span class="token function">allprojects</span> <span class="token punctuation">{</span>
+            repositories <span class="token punctuation">{</span>
+
+                <span class="token comment">// Remove all repositories not pointing to the enterprise repository url</span>
+                all <span class="token punctuation">{</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">!</span><span class="token keyword">is</span> MavenArtifactRepository <span class="token operator">||</span> url<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> ENTERPRISE_REPOSITORY_URL<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        project<span class="token punctuation">.</span>logger<span class="token punctuation">.</span><span class="token function">lifecycle</span><span class="token punctuation">(</span><span class="token string">&quot;Repository <span class="token interpolation"><span class="token delimiter variable">${</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token keyword">as</span><span class="token operator">?</span> MavenArtifactRepository<span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>url <span class="token operator">?:</span> name<span class="token delimiter variable">}</span></span> removed. Only <span class="token interpolation variable">$ENTERPRISE_REPOSITORY_URL</span> is allowed&quot;</span><span class="token punctuation">)</span>
+                        <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token comment">// add the enterprise repository</span>
+                <span class="token function">add</span><span class="token punctuation">(</span>maven <span class="token punctuation">{</span>
+                    name <span class="token operator">=</span> <span class="token string">&quot;STANDARD_ENTERPRISE_REPO&quot;</span>
+                    url <span class="token operator">=</span> <span class="token function">uri</span><span class="token punctuation">(</span>ENTERPRISE_REPOSITORY_URL<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// build.gradle.kts</span>
+
+<span class="token comment">// tag::show-repos-task[]</span>
+repositories<span class="token punctuation">{</span>
+    <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+tasks<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">&quot;showRepositories&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    doLast <span class="token punctuation">{</span>
+        repositories<span class="token punctuation">.</span><span class="token function">map</span> <span class="token punctuation">{</span> it <span class="token keyword">as</span> MavenArtifactRepository <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">forEach</span> <span class="token punctuation">{</span>
+            <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;repository: <span class="token interpolation"><span class="token delimiter variable">${</span>it<span class="token punctuation">.</span>name<span class="token delimiter variable">}</span></span> ('<span class="token interpolation"><span class="token delimiter variable">${</span>it<span class="token punctuation">.</span>url<span class="token delimiter variable">}</span></span>')&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// end::show-repos-task[]</span>
+</code></pre></div></div></div> <p>应用初始化脚本时的输出</p> <div class="code-switcher"><div class="tab-header"><ul><li class="active"> Groovy
+            </li><li> Kotlin
+            </li></ul></div> <div class="tab-content" style="display:;"><div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br></div><pre class="language-sh"><code><span class="token operator">&gt;</span> gradle --init-script init.gradle -q showRepositories
+repository: STANDARD_ENTERPRISE_REPO <span class="token punctuation">(</span><span class="token string">'https://repo.gradle.org/gradle/repo'</span><span class="token punctuation">)</span>
+</code></pre></div></div><div class="tab-content" style="display:none;"><div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br></div><pre class="language-sh"><code><span class="token operator">&gt;</span> gradle --init-script init.gradle.kts -q showRepositories
+repository: STANDARD_ENTERPRISE_REPO <span class="token punctuation">(</span><span class="token string">'https://repo.gradle.org/gradle/repo'</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <p>初始化脚本中的插件可确保在运行构建时仅使用指定的存储库。</p> <p>在初始化脚本中应用插件时，Gradle实例化插件并调用插件实例的<a href="1">Plugin.apply(T)</a>方法。<code>gradle</code>对象作为参数传递，可用于配置构建的各个方面。当然，可以将应用的插件解析为外部依赖项，如<a href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%9C%AC%E7%9A%84%E5%A4%96%E9%83%A8%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB">初始化脚本的外部依赖项</a>中所述</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/gradle-docs-cn/contents/03-running-gradle-builds/01-customizing-execution/02-the-gradle-daemon.html" class="prev">配置Gradle Daemon</a></span> <span class="next"><a href="/gradle-docs-cn/contents/03-running-gradle-builds/02-executing-multi-project-builds.html">执行多项目构建</a>→
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/gradle-docs-cn/assets/js/app.7989bdc5.js" defer></script><script src="/gradle-docs-cn/assets/js/2.73a3722c.js" defer></script><script src="/gradle-docs-cn/assets/js/17.200ea9f3.js" defer></script><script src="/gradle-docs-cn/assets/js/3.610d035e.js" defer></script>
+  </body>
+</html>

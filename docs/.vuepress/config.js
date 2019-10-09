@@ -8,7 +8,10 @@ module.exports = {
   ],
   plugins: ['code-switcher'],
   configureWebpack: (config, isServer) => {
-    console.log(config)
+    if (!isServer && config.mode === 'production') {
+      const Storage = require('dom-storage')
+      global.localStorage = new Storage(null, { strict: true })
+    }
   },
   themeConfig: {
     nav: [

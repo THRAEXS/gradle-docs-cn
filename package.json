@@ -10,6 +10,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "dom-storage": "^2.1.0",
     "vuepress": "^1.1.0"
   },
   "dependencies": {

@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/gradle-docs/',
+  base: '/gradle-docs-cn/',
   title: 'Gradle Build Tool',
   description: 'Gradle Chinese document',
   port: 8086,

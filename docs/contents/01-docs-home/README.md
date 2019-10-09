@@ -19,7 +19,7 @@ Gradle是专注于灵活性和性能的开源构建自动化工具。 Gradle构�
 - **快速** - Gradle通过重新使用以前执行的输出，仅处理已更改的输入以及并行执行任务来快速完成任务。
 - **强大** - Gradle是Android的官方构建工具，并支持许多流行的语言和技术。
 
-![Languages](/imgs/gradle-001.png)
+<img :src="$withBase('/imgs/gradle-001.png')" alt="Languages">
 
 ## Gradle新项目
 
@@ -31,7 +31,7 @@ Gradle入门很容易！首先，按照我们的指南[下载并安装Gradle](ht
 
 Gradle支持许多主要的IDE，包括Android Studio，Eclipse，IntelliJ IDEA，Visual Studio 2017和XCode。您还可以通过终端中的[命令行接口](https://docs.gradle.org/current/userguide/command_line_interface.html#command_line_interface)或持续集成服务器来调用Gradle。 [Gradle构建扫描](https://scans.gradle.com/?_ga=2.66070830.1480847771.1569235223-1279986108.1569235223)可帮助您了解构建结果，提高构建性能并协作以更快地解决问题。
 
-![Building](/imgs/gradle-002.png)
+<img :src="$withBase('/imgs/gradle-002.png')" alt="Building">
 
 ## 获得帮助
 

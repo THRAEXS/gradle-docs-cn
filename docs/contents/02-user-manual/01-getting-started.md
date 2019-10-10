@@ -29,7 +29,7 @@ Android Studio已安装有效的Gradle，因此在这种情况下，您无需单
 
 积极使用Gradle是了解它的好方法，因此，一旦安装了Gradle，请尝试以下入门实践教程之一：
 
-- [Creating a basic Gradle build(创建一个基本的Gradle构建)](https://guides.gradle.org/creating-new-gradle-builds/)
+- [Creating a basic Gradle build(创建一个基本的Gradle构建)](/guides/getting-started/01-creating-new-gradle-builds)
 - [Building Android apps(构建Android应用)](https://developer.android.com/training/basics/firstapp/)
 - [Building Java libraries(构建Java库)](https://guides.gradle.org/building-java-libraries/)
 - [Building Kotlin JVM libraries(构建Kotlin JVM库)](https://guides.gradle.org/building-kotlin-jvm-libraries/)

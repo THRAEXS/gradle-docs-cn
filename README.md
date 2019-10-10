@@ -1,5 +1,8 @@
 # Gradle 5.6.2中文文档
 
+`docs/contents`: https://docs.gradle.org
+`docs/guides`: https://gradle.org/guides
+
 - About Gradle
   - [X] What is Gradle?
 

@@ -102,6 +102,18 @@ module.exports = {
             'getting-started/01-creating-new-gradle-builds',
             'getting-started/02-creating-build-scans'
           ]
+        },
+        {
+          title: '项目教程',
+          children: []
+        },
+        {
+          title: '整合Gradle',
+          children: []
+        },
+        {
+          title: '扩展Gradle',
+          children: []
         }
       ]
     }

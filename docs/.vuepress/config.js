@@ -99,13 +99,62 @@ module.exports = {
         {
           title: '入门',
           children: [
-            'getting-started/01-creating-new-gradle-builds',
-            'getting-started/02-creating-build-scans'
+            '01-getting-started/01-creating-new-gradle-builds',
+            '01-getting-started/02-creating-build-scans',
+            ['https://docs.gradle.org/current/userguide/migrating_from_maven.html', '从Maven迁移']
           ]
         },
         {
           title: '项目教程',
-          children: []
+          children: [
+              {
+                  title: 'C++',
+                  children: [
+                      ['https://guides.gradle.org/building-cpp-applications/', '构建C++应用'],
+                      ['https://guides.gradle.org/building-cpp-libraries/', '构建和测试C++库']
+                  ]
+              },
+              {
+                  title: 'Groovy',
+                  children: [
+                      ['https://guides.gradle.org/building-groovy-libraries/', '构建Groovy库']
+                  ]
+              },
+              {
+                  title: 'Java',
+                  children: [
+                      '02-project-tutorials/03-java/01-building-java-applications.md',
+                      '02-project-tutorials/03-java/02-building-java-libraries.md',
+                      '02-project-tutorials/03-java/03-building-java9-modules.md',
+                      '02-project-tutorials/03-java/04-building-java-web-applications.md',
+                      '02-project-tutorials/03-java/05-building-spring-boot-2x-applications.md'
+                  ]
+              },
+              {
+                  title: 'JavaScript',
+                  children: [
+                      '02-project-tutorials/04-javascript/01-running-webpack-with-gradle'
+                  ]
+              },
+              {
+                  title: 'Kotlin',
+                  children: [
+                      ['https://guides.gradle.org/building-kotlin-jvm-libraries/', '构建Kotlin JVM库']
+                  ]
+              },
+              {
+                  title: 'Scala',
+                  children: [
+                      ['https://guides.gradle.org/building-scala-libraries/', '构建Scala库']
+                  ]
+              },
+              {
+                  title: 'Spring',
+                  children: [
+                      '02-project-tutorials/07-spring/01-building-spring-boot-2-applications-with-gradle'
+                  ]
+              }
+          ]
         },
         {
           title: '整合Gradle',

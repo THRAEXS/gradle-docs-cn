@@ -87,12 +87,110 @@ plugins {
 
 ## 发布构建扫描
 
+使用称为`--scan`的命令行标志发布构建扫描。
+
+使用`--scan`选项运行构建任务。构建完成后，将构建数据上传到scans.gradle.com之后，将为您提供一个链接，以查看构建扫描。
+
+``` sh {1}
+$ ./gradlew build --scan
+
+BUILD SUCCESSFUL in 0s
+
+Publishing build scan...
+https://gradle.com/s/uniqueid
+```
+
 ## 在线访问构建扫描
+
+首次单击该链接时，将要求您激活创建的构建扫描。
+
+您收到的用于激活构建扫描的电子邮件将类似于：
+
+![build scan](https://guides.gradle.org/creating-build-scans/images/build_scan_email.png)
+
+单击电子邮件中提供的链接，您将看到创建的构建扫描。
+
+![build scan](https://guides.gradle.org/creating-build-scans/images/build_scan_page.png)
+
+现在，您可以浏览构建扫描中包含的所有信息，包括执行任务所花费的时间，构建每个阶段所需的时间，任何测试的结果，所使用的插件和其他依赖项，所使用的任何命令行开关，和更多。
 
 ## 为所有构建启用构建扫描(可选)
 
+您可以避免使用Gradle初始化脚本将插件和许可协议添加到每个版本中。在`~/.gradle/init.d`目录（其中代字号代表您的主目录）中创建一个文件，其内容如下：
+
+<CodeSwitcher :languages="{ groovy: 'Groovy', kotlin: 'Kotlin' }">
+<template v-slot:groovy>
+
+``` groovy
+// build.gradle
+
+initscript {
+    repositories {
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath 'com.gradle:build-scan-plugin:@scanPluginVersion@'
+    }
+}
+
+rootProject {
+    apply plugin: com.gradle.scan.plugin.BuildScanPlugin
+
+    buildScan {
+        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+        termsOfServiceAgree = 'yes'
+    }
+}
+```
+
+</template>
+<template v-slot:kotlin>
+
+``` kotlin
+// buildScan.init.gradle.kts
+
+initscript {
+    repositories {
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath("com.gradle:build-scan-plugin:@scanPluginVersion@")
+    }
+}
+
+rootProject {
+    apply<com.gradle.scan.plugin.BuildScanPlugin>()
+
+    configure<com.gradle.scan.plugin.BuildScanExtension> {
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = "yes"
+    }
+}
+```
+
+</template>
+</CodeSwitcher>
+
+必要时，初始化脚本将下载构建扫描插件，并将其应用于每个项目，并接受许可协议。现在，您可以在系统上的任何内部版本上使用`--scan`标志。
+
+您可以向脚本添加其他功能，例如在什么条件下发布扫描信息。有关详细信息，请参见[《Build Scans用户手册》](https://docs.gradle.com/build-scan-plugin/?_ga=2.34500454.672448668.1570584104-1564571921.1570494734)。
+
 ## 总结
+
+在本指南中，您学习了如何：
+
+- 生成构建扫描
+
+- 在线查看构建扫描信息
+
+- 创建一个初始化脚本以启用对所有构建的构建扫描
 
 ## 下一步
 
+其他信息可以在[《Build Scans用户手册》](https://docs.gradle.com/build-scan-plugin/?_ga=2.34500454.672448668.1570584104-1564571921.1570494734)中找到。
+
 ## 帮助完善本指南
+
+有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请向[gradle-guides/creating-build-scans](https://github.com/gradle-guides/creating-build-scans/)添加问题或撤消请求，我们将尽快与您联系。

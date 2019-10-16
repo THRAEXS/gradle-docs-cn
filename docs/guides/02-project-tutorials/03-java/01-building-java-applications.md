@@ -19,7 +19,7 @@ date: 2019-10-12 10:36:00
 
 - 命令提示符
 
-- Java开发套件(JDK)版本8或更高版本
+- [Java开发套件](https://www.oracle.com/technetwork/java/javase/downloads/index.html)(JDK)版本8或更高版本
 
 - [Gradle发行版](https://gradle.org/install/)5.4.1或更高版本
 

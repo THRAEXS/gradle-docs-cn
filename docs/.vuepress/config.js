@@ -160,9 +160,14 @@ module.exports = {
         {
           title: '集成Gradle',
           children: [
-              '03-integrating-gradle/01-continuous-integration/01-using-gradle-with-jenkins',
-              '03-integrating-gradle/01-continuous-integration/02-using-gradle-with-teamcity',
-              '03-integrating-gradle/01-continuous-integration/03-gradle-with-travis-ci'
+              {
+                  title: '持续集成',
+                  children: [
+                      '03-integrating-gradle/01-continuous-integration/01-using-gradle-with-jenkins',
+                      '03-integrating-gradle/01-continuous-integration/02-using-gradle-with-teamcity',
+                      '03-integrating-gradle/01-continuous-integration/03-gradle-with-travis-ci'
+                  ]
+              }
           ]
         },
         {

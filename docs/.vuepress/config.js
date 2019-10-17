@@ -172,7 +172,18 @@ module.exports = {
         },
         {
           title: '扩展Gradle',
-          children: []
+          children: [
+              {
+                  title: '插件开发指南',
+                  children: [
+                      '04-extending-gradle/01-plugin-development-guides/01-designing-gradle-plugins',
+                      '04-extending-gradle/01-plugin-development-guides/02-implementing-gradle-plugins',
+                      '04-extending-gradle/01-plugin-development-guides/03-testing-gradle-plugins',
+                      ['04-extending-gradle/01-plugin-development-guides/04-publishing-gradle-plugins', '发布Gradle插件']
+                  ]
+              },
+              ['04-extending-gradle/02-developing-parallel-tasks', '开发并行任务']
+          ]
         }
       ]
     }

@@ -17,7 +17,8 @@ module.exports = {
     nav: [
       // { text: 'Guides', link: '/guides/' },
       { text: '文档主页', link: '/contents/01-docs-home/' },
-      { text: '教程', link: 'https://gradle.org/guides' },
+      // { text: '教程', link: 'https://gradle.org/guides' },
+      { text: '指南', link: '/guides/01-getting-started/01-creating-new-gradle-builds' },
       { text: '发布说明', link: 'https://docs.gradle.org/current/release-notes.html' },
       { text: 'Gradle API', items: [
         { text: 'Javadoc', link: 'https://gradle.org/guides' },

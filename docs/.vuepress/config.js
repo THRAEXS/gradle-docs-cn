@@ -123,11 +123,11 @@ module.exports = {
               {
                   title: 'Java',
                   children: [
-                      '02-project-tutorials/03-java/01-building-java-applications.md',
-                      '02-project-tutorials/03-java/02-building-java-libraries.md',
-                      '02-project-tutorials/03-java/03-building-java9-modules.md',
-                      '02-project-tutorials/03-java/04-building-java-web-applications.md',
-                      '02-project-tutorials/03-java/05-building-spring-boot-2x-applications.md'
+                      '02-project-tutorials/03-java/01-building-java-applications',
+                      '02-project-tutorials/03-java/02-building-java-libraries',
+                      '02-project-tutorials/03-java/03-building-java9-modules',
+                      '02-project-tutorials/03-java/04-building-java-web-applications',
+                      ['02-project-tutorials/03-java/05-building-spring-boot-2x-applications', '构建Spring Boot 2.x应用']
                   ]
               },
               {
@@ -151,7 +151,7 @@ module.exports = {
               {
                   title: 'Spring',
                   children: [
-                      '02-project-tutorials/07-spring/01-building-spring-boot-2-applications-with-gradle'
+                      '02-project-tutorials/03-java/05-building-spring-boot-2x-applications'
                   ]
               }
           ]

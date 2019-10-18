@@ -1,7 +1,11 @@
 # Gradle 5.6.2中文文档
 
-`docs/contents`: https://docs.gradle.org
-`docs/guides`: https://gradle.org/guides
+- `docs/contents`: https://docs.gradle.org
+- `docs/guides`: https://gradle.org/guides
+
+## Table of Contents
+
+## Gradle User Manual
 
 - About Gradle
   - [X] What is Gradle?
@@ -52,3 +56,51 @@
   - [ ] Gradle & Third-party Tools
   - [ ] The Gradle Wrapper
   - [ ] Gradle-managed Directories
+
+### Gradle Guides
+
+- [X] User Manual
+
+- [X] Tutorials
+
+- [ ] DSL Reference
+
+- Getting Started
+    - [X] Creating New Gradle Builds
+    - [X] Creating Build Scans
+    - [ ] Migrating From Maven
+
+- Project Tutorials
+    - C++
+        - [ ] Building C++ Applications
+        - [ ] Building C++ Libraries
+    - Groovy
+        - [ ] Building Groovy Libraries
+    - Java
+        - [X] Building Java Applications
+        - [X] Building Java Libraries
+        - [ ] Building Java 9 Modules
+        - [X] Building Java Web Applications
+        - [X] Building Spring Boot 2.x Applications
+    - JavaScript
+        - [X] Running Webpack with Gradle
+    - Kotlin
+        - [ ] Building Kotlin JVM Libraries
+    - Scala
+        - [ ] Building Scala Libraries
+    -   Spring
+        - [X] Building Spring Boot 2 Applications with Gradle
+
+- Integrating Gradle
+    - Continuous Integration
+        - [X] Using Gradle with Jenkins
+        - [X] Using Gradle with TeamCity
+        - [X] Using Gradle with Travis CI
+
+- Extending Gradle
+    - Plugin Development Guides
+        - [X] Designing Gradle Plugins
+        - [ ] Implementing Gradle Plugins
+        - [ ] Testing Gradle Plugins
+        - [ ] Publishing Gradle Plugins
+    - [ ] Developing Parallel Tasks

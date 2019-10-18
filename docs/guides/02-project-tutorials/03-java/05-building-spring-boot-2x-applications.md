@@ -260,4 +260,4 @@ java -jar build/libs/gradle-spring-boot-project.jar
 
 ## 帮助完善本指南
 
-有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请在[gradle-guides/building-spring-boot-2-projects-with-gradle](https://github.com/gradle-guides/building-spring-boot-2-projects-with-gradle/)中添加问题或请求，我们将尽快与您联系。
+有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请在[gradle-guides/building-spring-boot-2-projects-with-gradle](https://github.com/gradle-guides/building-spring-boot-2-projects-with-gradle/)中添加issue或合并请求，我们将尽快与您联系。

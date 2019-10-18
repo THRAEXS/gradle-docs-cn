@@ -193,4 +193,4 @@ rootProject {
 
 ## 帮助完善本指南
 
-有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请向[gradle-guides/creating-build-scans](https://github.com/gradle-guides/creating-build-scans/)添加问题或撤消请求，我们将尽快与您联系。
+有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请向[gradle-guides/creating-build-scans](https://github.com/gradle-guides/creating-build-scans/)添加issue或合并请求，我们将尽快与您联系。

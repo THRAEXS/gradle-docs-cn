@@ -352,4 +352,4 @@ BUILD SUCCESSFUL
 
 ## 帮助完善本指南
 
-有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请在[gradle-guides/building-java-applications](https://github.com/gradle-guides/building-java-applications/)中添加问题或请求请求，我们将尽快与您联系。
+有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请在[gradle-guides/building-java-applications](https://github.com/gradle-guides/building-java-applications/)中添加issue或合并请求，我们将尽快与您联系。

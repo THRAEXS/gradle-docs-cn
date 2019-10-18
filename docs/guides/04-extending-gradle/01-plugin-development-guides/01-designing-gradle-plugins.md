@@ -19,9 +19,7 @@ date: 2019-10-17 16:22:00
 
 - 了解Gradle基础知识，例如项目组织，任务创建和配置以及Gradle构建生命周期
 
-如果您碰巧是Gradle的初学者，请先阅读Gradle使用手册，然后再阅读Gradle用户手册，以更深入地了解入门指南。
-
-如果你是一个刚开始使用Gradle的人，请先从[使用Gradle的入门指南](/guides/01-getting-started/01-creating-new-gradle-builds)开始，同时参考[Gradle用户手册](/contents/01-docs-home/)进行更深入的学习。
+如果您是Gradle的初学者，请先从[使用Gradle的入门指南](/guides/01-getting-started/01-creating-new-gradle-builds)开始，同时参考[Gradle用户手册](/contents/01-docs-home/)进行更深入的学习。
 
 ## 1. 体系结构
 

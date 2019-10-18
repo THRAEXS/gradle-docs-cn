@@ -175,7 +175,7 @@ BUILD SUCCESSFUL
 
 有意见或问题吗？找到错字了？像所有Gradle指南一样，帮助只是GitHub issue而已。请在[gradle-guides/designing-gradle-plugins](https://github.com/gradle-guides/designing-gradle-plugins/)中添加issue或合并请求，我们将尽快与您联系。
 
-## 5. 后续步骤
+## 5. 下一步
 
 现在，您已经熟悉了设计Gradle插件的基础知识，您可能会感兴趣：
 

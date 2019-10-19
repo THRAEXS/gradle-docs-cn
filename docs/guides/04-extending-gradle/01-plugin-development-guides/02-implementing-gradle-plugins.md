@@ -153,6 +153,79 @@ tasks.register<LatestArtifactVersion>("latestVersionInhouseRepo") {
 
 ### 2.3. 从增量任务中受益
 
+Gradle使用已声明的输入和输出来确定任务是否是最新的并且需要执行任何工作。如果输入或输出均未更改，则Gradle可以跳过该任务。Gradle将此机制称为[增量构建支持](https://docs.gradle.org/5.0/userguide/more_about_tasks.html#sec:up_to_date_checks)。增量构建支持的优点是它可以显着提高构建性能。
+
+Gradle插件引入自定义任务类型非常普遍。作为插件作者，这意味着您必须使用输入或输出注释来注释任务的所有属性。强烈建议为每项任务配备信息，以便进行最新检查。请记住：为了使最新检查正常工作，任务需要同时定义输入和输出。
+
+让我们考虑以下示例任务以进行说明。该任务在输出目录中生成给定数量的文件。写入这些文件的文本由String属性提供。
+
+__Generate.java__
+``` java
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.gradle.api.DefaultTask;
+import org.gradle.api.tasks.Input;
+import org.gradle.api.tasks.OutputDirectory;
+import org.gradle.api.tasks.TaskAction;
+
+public class Generate extends DefaultTask {
+    private int fileCount;
+    private String content;
+    private File generatedFileDir;
+
+    @Input
+    public int getFileCount() {
+        return fileCount;
+    }
+
+    public void setFileCount(int fileCount) {
+        this.fileCount = fileCount;
+    }
+
+    @Input
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    @OutputDirectory
+    public File getGeneratedFileDir() {
+        return generatedFileDir;
+    }
+
+    public void setGeneratedFileDir(File generatedFileDir) {
+        this.generatedFileDir = generatedFileDir;
+    }
+
+    @TaskAction
+    public void perform() throws IOException {
+        for (int i = 1; i <= fileCount; i++) {
+            writeFile(new File(generatedFileDir, i + ".txt"), content);
+        }
+    }
+
+    private void writeFile(File destination, String content) throws IOException {
+        BufferedWriter output = null;
+        try {
+            output = new BufferedWriter(new FileWriter(destination));
+            output.write(content);
+        } finally {
+            if (output != null) {
+                output.close();
+            }
+        }
+    }
+}
+```
+
+本指南的第一部分讨论了[Plugin Development插件](#_2-1-使用plugin-development插件编写插件)。作为将插件应用于项目的另一个好处，任务`validateTaskProperties`任务会自动检查自定义任务类型实现中定义的每个公共属性的现有输入/输出注释。
+
 ### 2.4. DSL-like API建模
 
 #### 2.4.1. 扩展与约定
